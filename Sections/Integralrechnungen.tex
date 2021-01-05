@@ -1,0 +1,36 @@
+\section{Integralrechnung}
+
+\subsection{Riemann Integrierbarkeit}
+Das Riemann Integral zerlegt die Funktion $f$ in \textit{unendlich} viele Rechtecke mit Breite \textit{0} und einer zufälligen Höhe $\xi_i$. Die Summe aller Rechtecke konvergiert gegen die Fläche unter der Funktionslinie (Das Integral $I$).
+\[
+\int\limits_{a \text{ \tiny(untere Grenze)}}^{b \text{ \tiny(obere Grenze)}}f(x)dx = \lim_{\substack{n\to\infty\\\Delta x_i\to 0}} \sum\limits_{i = 1}^{n}f(\xi_i)\underbrace{(x_i - x_{i-1})}_{\Delta x_i}
+\]
+
+\subsubsection{Integrierbarkeit}
+Eine Funktion $f$ ist integrierbar, wenn sie stetig oder monoton beschränkt und an höchstens endlich vielen Stellen unstetig ist.
+
+\subsection{Bestimmtes Integral}
+\[\int_{a}^{b}f(x)dx = F(b) - F(a) = \int_{a}^{0}f(x)dx + \int_{0}^{b}f(x)dx\]
+
+\subsection{Formeln}
+\noindent Flächeninhalt: \[A = \int_{a}^{b}\left|f(x)\right|dx\]
+\noindent Integral Ableitung mit Funktion-Limits: \[\left(\int_{a(x)}^{b(x)}f(t)dt\right)' = f(b(x))b'(x) - f(a(x))a'(x)\]
+\noindent Integral Ungleichung:
+\[\left|\int_{a}^{b}f(x)dx\right| \leq \int_{a}^{b}\left|f(x)\right|dx\]
+
+\subsection{Mittelwertsatz}
+Sei $f(x)$ in $[a;b]$ stetig, dann ist der Mittelwert aller Punkte:
+\[\frac{1}{b-a}\int_{a}^{b}f(x)dx\]
+
+
+\begin{thebibliography}{1}
+	\bibitem{hsr}
+	\texttt{An1E} Vorlesungen an der OST Rapperswil und dem dazugehörigen Skript,
+	\textit{Dr. Bernhard Zgraggen}, Herbstsemester 2020
+	\bibitem{bronstein}
+	Taschenbuch der Mathematik,
+	11. \"uberarbeitete Auflage, 2020 (1977),
+	\textit{Bronstein, Semendjajew, Musiol, M\"uhlig}, 
+	\texttt{ISBN 978-3-8085-5792-1}
+\end{thebibliography}
+

@@ -1,0 +1,59 @@
+\section{Grenzwert}
+\subsection{Formen}
+\noindent\textbf{Bestimmt}
+\begin{align*}
+	\frac{g}{\infty} = 0,\; 
+	\infty^\infty = \infty,\; 
+	\frac{\infty}{0^\pm} = \pm\infty,\;
+	\frac{1}{0^\pm} = \pm\infty,\;
+	\\
+	\frac{g}{0^+} = \begin{cases} \infty & g > 0\\-\infty & g < 0 \end{cases},\;
+	\frac{\infty}{g} = \begin{cases} \infty & g > 0\\-\infty & g < 0 \end{cases}
+\end{align*}
+
+\noindent\textbf{Unbestimmt}
+\begin{align*}
+	\frac{0}{0},\;
+	\frac{\infty}{\infty},\;
+	0\cdot\infty,\;
+	\infty - \infty,\;
+	0^0,\; \infty^0,\;
+	1^\infty
+\end{align*}
+siehe \verweiseref{lhopital} für die Bestimmung von \textit{unbestimmten} Grenzwerten
+
+\subsection{Einschliessungs-Prinzip}\label{einschliessungsprinzip}
+\todo{TODO}
+
+\subsection{Bolzano-Weierstrass}\label{bolzano}
+\todo{monoton Steigend o. Fallend und Beschränkt = Konvergent.}
+\begin{itemize}[nosep]
+	\item bestimmt divergent
+	\item unbestimmt divergent
+\end{itemize}
+
+\subsection{Bemerkenswerte Grenzwerte}
+\begin{align*}
+	\setlength\extrarowheight{8pt}
+	\begin{array}{*2{>{\displaystyle}l}}
+		\lim_{x\to 0} \frac{\sin x}{x} = 1 & \lim_{x\to\infty} \left(1 \pm \frac{a}{x}\right)^x = e^{\pm a} \\
+		\lim_{x\to 0} \frac{a^x - 1}{x} = \ln a & \lim_{x\to\infty} \frac{(\ln x)^a}{x^b} = 0 \\
+		\lim_{x\to 0} \frac{e^x - 1}{2} = 1 & \lim_{x\to\infty} \sqrt[x]{p} = 1\\
+		\lim_{x\to 0} x\ln x = 0 & \lim_{x\to\infty} \sum_{k=0}^x q^k = \frac{1}{1-q} \quad (|q| < 1)\\
+	\end{array}
+\end{align*}
+
+\subsection{Bernoulli-l’Hôpital \bronstein{57}}\label{lhopital}
+Wenn $\frac{f(x)}{g(x)} = \frac{0}{0}$ oder $\frac{\pm\infty}{\pm\infty}$ und $g'(x) \neq 0$ dann gilt:
+\[
+\lim\limits_{x \rightarrow a}\frac{f(x)}{g(x)} = \lim\limits_{x \rightarrow a}\frac{f'(x)}{g'(x)}
+\]
+Falls die Ableitung noch unbestimmt ist, einfach Wiederholen.
+\\ \\
+\noindent\textbf{Hinweis}\\
+\begin{tabular}{rrl}
+	$f \cdot g\rightarrow $ & $ (0+) \cdot \infty$: & $\frac{f}{1 / g}$ vom Type $\frac{0}{0}$; $\frac{1/f}{g}$ vom Type $\frac{\infty}{\infty}$ \\ && \\
+	$f - g \rightarrow $& $\infty - \infty$: & $\frac{1/g-1/f}{1/(f\cdot g)}$ vom Type $\frac{0}{0}$ \\ && \\
+	$f^z \rightarrow$ & $ (0+)^0, \infty^0, 1^\infty$: & $e^{z\cdot\ln f}$
+\end{tabular}\\ \\ 
+Durch Ausklammern von Vorzeichen und Reziprokbildung bei negativen Exponenten sind andere Vorzeichenvarianten vollständig abgedeckt.

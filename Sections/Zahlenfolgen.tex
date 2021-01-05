@@ -1,0 +1,43 @@
+
+\section{Zahlenfolgen und Reihe}
+
+\subsection{Formel}
+\noindent Binomischer Satz
+\begin{align*}
+	(a+b)^n &= \sum_{k=0}^n \binom{n}{k} a^{n-k} b^k
+	&
+	\binom{n}{k} &= \frac{n!}{k!(n-k)!}
+\end{align*}
+
+\noindent Umgebung ($g$: Grenzwert, $a_n$ Folge, $e$ Umgebung)
+\begin{align*}
+	\left|a_n - g\right| < \epsilon
+\end{align*}
+
+\subsection{Vollständige Induktion}\label{induktion}
+\begin{enumerate}[nosep]
+	\item Verankerung VA: Erste Zahl $n$ finden, welche Behauptung erfüllt.
+	\item Vererbung VE:
+	\begin{enumerate}
+		\item Annahme: Behauptung nochmals 1:1 abschreiben
+		\item Schritt: In die Behauptung $n+1$ einsetzten.
+		\item Rechnung: Gleichung aufstellen $\rightarrow$ VE$_{Links}$ $\eqq$ Behauptung + Rest; Umformen bis Gleichung stimmt
+	\end{enumerate}
+
+\end{enumerate}
+
+\subsection{Folgen}
+\noindent Bei \textbf{Arithmetischen} Folgen ist die Differenz $\pm d$ von zwei Gliedern $n \in \mathbb{N}$ konstant. ($a_n = a_1 + (n - 1) \cdot d$) Beispiel:
+\[5,8,11,14,\dots \quad (+3)\]
+
+\noindent Bei \textbf{Geometrischen} Folgen ist der Faktor $q$ zwischen zwei Gliedern konstant. ($a_n = a_1 \cdot q^{n-1}$)
+\[10, 1, \frac{1}{10}, \frac{1}{100}\dots \quad (\cdot \frac{1}{10})\]
+
+
+\subsection{Reihen}
+\begin{align*}
+	\sum_{k=1}^n k   &= \frac{n(n+1)}{2} &
+	\sum_{k=1}^n k^2 &= \frac{n(n+1)(2n+1)}{6} \\
+	\sum_{k=1}^n k^3 &= \frac{n^2(n+1)^2}{4} &
+	\sum_{k=0}^{n-1} ar^k &= a\left(\frac{1-r^n}{1-r}\right) (r \neq 1)
+\end{align*}
