@@ -1,4 +1,4 @@
-
+\textbf{}
 \section{Funktionen}
 $ f:  \mathbb{D}_f \to \mathbb{W}_f \quad x \mapsto f(x) $
 
@@ -24,7 +24,7 @@ Eine Funktion heisst \textit{stetig} wenn $x \in \mathbb{D}_f$ ist und \[\lim\li
 	\textbf{periodisch}:& $f(x) = f(x \pm p)$& Periode \\
 \end{tabular}
 
-\subsubsection{Monotonie}
+\subsubsection{Monotonie}\label{monotonie}
 Beschreibt das Wachstumsverhalten einer Reihe.\\
 \noindent
 \begin{tabular}{ll}
@@ -40,8 +40,12 @@ Beschreibt das Wachstumsverhalten einer Reihe.\\
 	$f \downarrow$ & $f' \leq 0$\\
 \end{tabular}
 
-\subsubsection{Beschränktheit}
-Eine Funktion ist beschränkt, wenn sie ein Infimum $k$ (Grösster unterer Wert) oder Supremum $K$ (Kleinster oberer Wert) Schranke hat. Das bedeutet $k < f(x) < K$
+\subsubsection{Beschränktheit}\label{beschränkt}
+Eine Funktion ist beschränkt, wenn sie ein Infimum $k$ (Grösster unterer Wert) oder Supremum $K$ (Kleinster oberer Wert) Schranke hat. Das bedeutet $k < f(x) < K$. Um $K$ herauszufinden, Reihe $a_n \lessgtr K$ und nach $n$ auflösen. Oft wird eine Abschwächen zB $a_n \eqi \frac{n^2+1}{n+1} > \frac{n^2}{n+1} > \frac{n^2}{2n} = \frac{n}{2}$ verwendet.
+
+\subsubsection{Umgebung}
+Umgebung ($g$: Grenzwert, $a_n$ Folge, $e$ Umgebung): $\left|a_n - g\right| < \epsilon$
+
 
 \subsubsection{Konvergenz / Divergenz}
 Eine Funktion/Reihe ist \textbf{Konvergent}, wenn sie Beschränkt + Monoton ist, andern falls ist sie \textbf{Divergent}.
@@ -79,6 +83,8 @@ Annähernde Kurve in 3 Typen (ZG: Zähler-Grad, NG: Nenner-Grad):\\
 	ZG $>$ NG & Polynomdivision & $\frac{x^2 + 2x + 1}{x - 1} \Rightarrow \underbrace{x + 3}_{Asymptote} + \frac{4}{x -1}$
 \end{tabular}
 
+\noindent Echt-Gebrochen: ZG $<$ NG, Unecht-Gebrochen: ZG $>$ NG
+
 \subsection{Schnittwinkel}
 Schnittwinkel zwischen zwei Geraden ($m: \text{Steigung} = f'(x)$):
 \[ \tan(\alpha) = \frac{m_1 - m_2}{1 + m_1m_2} \]
@@ -93,13 +99,19 @@ Schnittwinkel zwischen zwei Geraden ($m: \text{Steigung} = f'(x)$):
 \includegraphics[width=\columnwidth]{./Images/horner.jpg}
 
 
-\subsection{Partialbruchzerlegung \bronstein{15}}
-\todo{TODO}
+\subsection{Partialbruchzerlegung}
+Jede echt gebrochen rationale Funktion $R(x)$ kann in ein Partialbruch zerlegt werden.
+\begin{enumerate}[nosep]
+	\item evt. Polynom-Division
+	\item Jedes Produkt als Division darstellen (mit entsprechendem Fall \bronstein{15})
+	\item Auf einen HN bringen und mit original Gleichsetzen.
+	\item Koeffizientenvergleich oder Nullstellen finden
+\end{enumerate}
 
 \subsection{Trigonometrisch}
-\begin{center}
+
 $ \text{rad} = \frac{\pi}{180°} \cdot \text{deg} \quad;\quad \text{deg} = \frac{180}{\pi} \cdot \text{rad} $
-\end{center}
+
 
 \begin{table}[ht]
 	\centering
@@ -150,9 +162,7 @@ $ \text{rad} = \frac{\pi}{180°} \cdot \text{deg} \quad;\quad \text{deg} = \frac
 	\sinh(\alpha) &= \frac{e^\alpha - e^{-\alpha}}{2}\\
 	\cosh(\alpha) &= \frac{e^\alpha + e^{-\alpha}}{2}\\
 	\arcsinh(\alpha) &= \ln(\alpha + \sqrt{\alpha^2 - 1})\\
-	\arccosh(\alpha) &= \ln(\alpha + \sqrt{\alpha^2 + 1})\\
-	\midrule
-	e^1 &= e \quad ln(1) = 0 \quad \ln(e^x) = x
+	\arccosh(\alpha) &= \ln(\alpha + \sqrt{\alpha^2 + 1})
 \end{align*}
 
 

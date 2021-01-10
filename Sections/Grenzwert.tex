@@ -22,15 +22,22 @@
 \end{align*}
 siehe \verweiseref{lhopital} für die Bestimmung von \textit{unbestimmten} Grenzwerten
 
-\subsection{Einschliessungs-Prinzip}\label{einschliessungsprinzip}
-\todo{TODO}
+\subsection{Einschliessungs-Prinzip \bronstein{56}}\label{einschliessungsprinzip}
+Wenn eine Funktionen $f(x)$ in $a(x) < f(x) < b(x)$ geschlossen ist, und wenn $\lim\limits_{x \rightarrow g}a(x) = G$ sowie $\lim\limits_{x \rightarrow g}b(x) = G$, dann ist auch $\lim\limits_{x \rightarrow g}f(x) = G$.
 
 \subsection{Bolzano-Weierstrass}\label{bolzano}
-\todo{monoton Steigend o. Fallend und Beschränkt = Konvergent.}
-\begin{itemize}[nosep]
-	\item bestimmt divergent
-	\item unbestimmt divergent
-\end{itemize}
+Wenn eine Folge \underline{monoton} (Siehe \verweiseref{monotonie}) \textbf{und} \underline{beschränkt} (Siehe \verweiseref{beschränkt}) ist, dann ist diese auch Konvergent.
+
+\[
+\left.\begin{aligned}
+	\exists\sup f(x) &\text{ und } f(x) \Uparrow \\
+	\exists\inf f(x) &\text{ und } f(x) \Downarrow
+\end{aligned}
+\right\rbrace \Rightarrow 
+f(x) \text{konvergent}
+\]
+
+\noindent Supremum: kleinste obere Schranke, Infimum: grösste untere Schranke
 
 \subsection{Bemerkenswerte Grenzwerte}
 \begin{align*}
@@ -38,8 +45,8 @@ siehe \verweiseref{lhopital} für die Bestimmung von \textit{unbestimmten} Grenz
 	\begin{array}{*2{>{\displaystyle}l}}
 		\lim_{x\to 0} \frac{\sin x}{x} = 1 & \lim_{x\to\infty} \left(1 \pm \frac{a}{x}\right)^x = e^{\pm a} \\
 		\lim_{x\to 0} \frac{a^x - 1}{x} = \ln a & \lim_{x\to\infty} \frac{(\ln x)^a}{x^b} = 0 \\
-		\lim_{x\to 0} \frac{e^x - 1}{2} = 1 & \lim_{x\to\infty} \sqrt[x]{p} = 1\\
-		\lim_{x\to 0} x\ln x = 0 & \lim_{x\to\infty} \sum_{k=0}^x q^k = \frac{1}{1-q} \quad (|q| < 1)\\
+		\lim_{x\to 0} \frac{e^x - 1}{2} = 0 & \lim_{x\to\infty} \sqrt[x]{p} = 1\\
+		\lim_{x\to 0} x \cdot \ln x = 0 & \lim_{x\to\infty} \sum_{k=0}^x q^k = \frac{1}{1-q} \quad (|q| < 1)\\
 	\end{array}
 \end{align*}
 
