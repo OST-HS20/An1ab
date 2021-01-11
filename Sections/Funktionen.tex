@@ -41,23 +41,23 @@ Beschreibt das Wachstumsverhalten einer Reihe.\\
 \end{tabular}
 
 \subsubsection{Beschränktheit}\label{beschränkt}
-Eine Funktion ist beschränkt, wenn sie ein Infimum $k$ (Grösster unterer Wert) oder Supremum $K$ (Kleinster oberer Wert) Schranke hat. Das bedeutet $k < f(x) < K$. Um $K$ herauszufinden, Reihe $a_n \lessgtr K$ und nach $n$ auflösen. Oft wird eine Abschwächen zB $a_n \eqi \frac{n^2+1}{n+1} > \frac{n^2}{n+1} > \frac{n^2}{2n} = \frac{n}{2}$ verwendet.
+Eine Funktion ist beschränkt, wenn sie ein Infimum $k$ (Grösster unterer Wert) oder Supremum $K$ (Kleinster oberer Wert) Schranke hat. Das bedeutet $k < f(x) < K$. Um $K$ herauszufinden, Reihe $a_n \lessgtr K$ und nach $n$ auflösen. Oft wird eine Abschwächen zB $a_n \eqi \frac{n^2+1}{n+1} > \frac{n^2}{n+1} > \frac{n^2}{2n} = \frac{n}{2}$ verwendet. Hinweis: Grenzwertgleichung!
 
 \subsubsection{Umgebung}
 Umgebung ($g$: Grenzwert, $a_n$ Folge, $e$ Umgebung): $\left|a_n - g\right| < \epsilon$
 
 
 \subsubsection{Konvergenz / Divergenz}
-Eine Funktion/Reihe ist \textbf{Konvergent}, wenn sie Beschränkt + Monoton ist, andern falls ist sie \textbf{Divergent}.
+Eine Funktion/Reihe ist \textbf{Konvergent}, wenn sie Beschränkt + Monoton ist. Andernfalls ist sie \textbf{Divergent}.
 Konvergenz bestimmen:
 \begin{enumerate}[nosep]
-	\item Grenzwert berechnen (unter Vorbehalt)
-	\item Monotonie prüfen (\underline{Hinweis}: \verweiseref{einschliessungsprinzip}, \verweiseref{bolzano}, \verweiseref{induktion})
-	\item Beschränktheit prüfen anhand der Monotonie
+	\item Grenzwert berechnen (\underline{Hinweis}: Grenzwertgleichung, \verweiseref{einschliessungsprinzip}, \verweiseref{bolzano}, \verweiseref{induktion})
+	\item \verweiseref{monotonie} prüfen 
+	\item Beschränktheit prüfen anha0nd der Monotonie
 \end{enumerate}
 
-\subsubsection{Konvexität / Wendepunkt \bronstein{253}}
-Auch als Krümmungsverhalten bekannt.\\
+\subsubsection{Konvexität / Wendepunkt}
+Auch als Krümmungsverhalten bekannt. (Siehe auch \bronstein{253})\\
 \begin{minipage}{\textwidth}	
 	\begin{minipage}{0.2\textwidth}
 		\includegraphics[width=\linewidth,keepaspectratio=true]{./Images/konvexkonkav.png}
