@@ -34,9 +34,6 @@ Das Differential ist $dy = f'(x) \cdot dx$ und kann mit $\underbrace{f(x) - f(x_
 \end{tabular}
 }
 
-\subsection{Tangentengleichung}
-Bestimmen der Steigung $m$ durch $f'$ und anschliessend mit gegebenem Punkt $(x,y)$ folgenden Gleichung nach $b$ lösen:
-$y = mx + b$
 
 \subsection{Taylor-Reihe \bronstein{484}}
 Das Tayler-Polynom approximiert eine Funktion um einen Entwicklungspunkt $a$:
@@ -47,9 +44,9 @@ Das Tayler-Polynom approximiert eine Funktion um einen Entwicklungspunkt $a$:
 
 \subsubsection{Linearisierung}
 Spezialfall von Tayler-Polynom mit Entwicklungspunkt $a$:
-\[\hat{f}(x) = f(a) + f'(a)\cdot(x - a)\]
+\[Tn_2(x, a) = \hat{f}(x) = f(a) + f'(a)\cdot(x - a)\]
 
-\subsubsection{Restglied $R_n$}
+\subsubsection{Restglied}
 \begin{tabular}{ll}
 	Lagrange $R_n$ &= $\frac{f^{n + 1}(\xi)}{(n + 1)!} \cdot (x - a)^{n+1}$\\
 	Couchy $R_n$ &= $\frac{f^{n + 1}(\xi)}{n!} \cdot (x - a)^{n+1} (1 - \beta)^n$
@@ -64,17 +61,43 @@ Spezialfall von Tayler-Polynom mit Entwicklungspunkt $a$:
 \noindent\textbf{Relativer}-Fehler: $r = \frac{\text{absolut}}{f(x)} \rightarrow [\%]$
 
 \subsection{Fehlerrechnung und Fortpflanzung}
-\todo{Verbessern und Verallgemeinern}
-Durch Substituieren von \verweiseref{differential}:
+\begin{center}
+	\begin{tabular}{c|c|c|}
+		\diagbox{Y}{X} & $\Delta x$ (Abs) & $\frac{\Delta x}{x}$ (Rel) \\
+		\midrule
+		$\Delta y$ (Abs) & A & B \\
+		\midrule
+		$\frac{\Delta y}{y}$ (Rel) & C & D
+	\end{tabular}
+\end{center}
+
+\noindent Je nach Aufgabentype entsprechenden Fall in Tabelle wählen und von Y zu X rechnen. $\Delta x$ und $\Delta y$ müssen durch substituieren von \verweiseref{differential} ersetzt werden!
+
+\noindent\textbf{Beispiel}: Rel.Y zu Rel.X rechnen (Fall D)
 \[
-\dfrac{dy}{y} = \text{Relativer Inputfehler} = \dfrac{f'(x)dx}{y} \xRightarrow[Ziel]{}\dfrac{dx}{x}
+\dfrac{dy}{y_0} \approxeq \dfrac{f'(x)dx}{y_0} \xRightarrow[Ziel]{}\dfrac{dx}{x}
 \]
 
 \subsubsection{Mittelwertsatz Differentialrechnung}
-Bei einer Sekante (Mittlerer Durchschnitt von $a$ und $b$) gibt es auf der Funktion $f$ mindestens eine Punkt mit der selben Steigung $D$. Der Punkt kann durch das Maximieren der Hilfs-Funktion $h(x)$ gefunden werden. Auch gilt der Zusammenhang von $f'(\xi) = f'(x)$!
-\begin{center}
-	\includegraphics[height=12em]{./Images/Mittelwertsatz.png}
-\end{center}
+Der MWS \bronstein{454} wird oft für den Beweis einer Ungleichung verwendet, wenn die Funktion stetig und differenzierbar ist.
+\begin{minipage}{\textwidth}	
+	\begin{minipage}{0.2\textwidth}
+		\includegraphics[width=\linewidth,keepaspectratio=true]{./Images/Mittelwertsatz.png}
+	\end{minipage}%%% to prevent a space
+	\begin{minipage}{0.3\textwidth}	
+		\[f'(\xi) = \frac{f(b) - f(a)}{b - a}\] 
+		\[ h(x) = \textcolor{green}{f(x)} - \textcolor{blue}{s(x)} \]
+	\end{minipage}
+\end{minipage}
+
+\noindent\textbf{Beispiel} $\colorboxed{red}{\sin(x) < x},\quad x \in (0, \frac{\pi}{2}),\quad \xi \in (0, x)$
+\[\xRightarrow{\text{MWS}} \sin'(\xi) = \cos(\xi) = \frac{\sin(x) - \sin(0)}{x - 0}\]
+Weil $\xi$ zwischen 0 und $\frac{\pi}{2}$ ist, muss folgendes gelten: 
+
+$
+0 < \overbrace{\cos(\xi)}^{\text{MWS}} < 1 \rightarrow 0 < \frac{\sin(x)}{x} < 1 \rightarrow 0 < \colorboxed{red}{\sin(x) < x}
+$
+
 
 \subsection{Extremalwerte}
 Um ein relative Extremalwert zu berechnen, muss die Steigung an $x_0 = 0$ sein:

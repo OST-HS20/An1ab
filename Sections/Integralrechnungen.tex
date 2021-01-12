@@ -1,13 +1,9 @@
 \section{Integralrechnung}
-
-\subsection{Riemann Integrierbarkeit}
 Das Riemann Integral zerlegt die Funktion $f$ in \textit{unendlich} viele Rechtecke mit Breite \textit{0} und einer zufälligen Höhe $\xi_i$. Die Summe aller Rechtecke konvergiert gegen die Fläche unter der Funktionslinie (Das Integral $I$).
 \[
 \int\limits_{a \text{ \tiny(untere Grenze)}}^{b \text{ \tiny(obere Grenze)}}f(x)dx = \lim_{\substack{n\to\infty\\\Delta x_i\to 0}} \sum\limits_{i = 1}^{n}f(\xi_i)\underbrace{(x_i - x_{i-1})}_{\Delta x_i}
 \]
-
-\subsubsection{Integrierbarkeit}
-Eine Funktion $f$ ist integrierbar, wenn sie stetig oder monoton beschränkt und an höchstens endlich vielen Stellen unstetig ist.
+\noindent Eine Funktion $f$ ist integrierbar, wenn sie stetig oder monoton beschränkt und an höchstens endlich vielen Stellen unstetig ist.
 
 \subsection{Bestimmtes Integral}
 \[\int_{a}^{b}f(x)dx = F(b) - F(a) = \int_{a}^{0}f(x)dx + \int_{0}^{b}f(x)dx\]
@@ -18,7 +14,7 @@ Eine Funktion $f$ ist integrierbar, wenn sie stetig oder monoton beschränkt und
 \noindent Integral Ungleichung:
 \[\left|\int_{a}^{b}f(x)dx\right| \leq \int_{a}^{b}\left|f(x)\right|dx\]
 
-\subsection{Mittelwertsatz}
-Sei $f(x)$ in $[a;b]$ stetig, dann ist der Mittelwert aller Punkte:
+\subsection{Mittelwertsatz Integral}
+Sei $f(x)$ in $[a;b]$ stetig, dann ist der Mittelwert (RMS) aller Punkte:
 \[\frac{1}{b-a}\int_{a}^{b}f(x)dx\]
 
